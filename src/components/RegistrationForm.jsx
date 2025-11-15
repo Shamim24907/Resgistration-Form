@@ -16,14 +16,11 @@ const RegistrationForm = ({ onSave }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (form.password !== form.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-
     onSave(form);
-
     setForm({
       name: "",
       email: "",
@@ -36,14 +33,13 @@ const RegistrationForm = ({ onSave }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      {/** Inputs **/}
       <input
         type="text"
         name="name"
         placeholder="Full Name"
         value={form.name}
         onChange={handleChange}
-        className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+        className="w-full p-3 border border-[#324f7b] rounded-lg focus:ring-2 focus:ring-[#86a6de] outline-none"
         required
       />
 
@@ -53,7 +49,7 @@ const RegistrationForm = ({ onSave }) => {
         placeholder="Email"
         value={form.email}
         onChange={handleChange}
-        className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+        className="w-full p-3 border border-[#324f7b] rounded-lg focus:ring-2 focus:ring-[#86a6de] outline-none"
         required
       />
 
@@ -63,7 +59,7 @@ const RegistrationForm = ({ onSave }) => {
         placeholder="Password"
         value={form.password}
         onChange={handleChange}
-        className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+        className="w-full p-3 border border-[#324f7b] rounded-lg focus:ring-2 focus:ring-[#86a6de] outline-none"
         required
       />
 
@@ -73,7 +69,7 @@ const RegistrationForm = ({ onSave }) => {
         placeholder="Confirm Password"
         value={form.confirmPassword}
         onChange={handleChange}
-        className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+        className="w-full p-3 border border-[#324f7b] rounded-lg focus:ring-2 focus:ring-[#86a6de] outline-none"
         required
       />
 
@@ -83,7 +79,7 @@ const RegistrationForm = ({ onSave }) => {
         placeholder="Address"
         value={form.address}
         onChange={handleChange}
-        className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+        className="w-full p-3 border border-[#324f7b] rounded-lg focus:ring-2 focus:ring-[#86a6de] outline-none"
         required
       />
 
@@ -93,13 +89,13 @@ const RegistrationForm = ({ onSave }) => {
         placeholder="Phone"
         value={form.phone}
         onChange={handleChange}
-        className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+        className="w-full p-3 border border-[#324f7b] rounded-lg focus:ring-2 focus:ring-[#86a6de] outline-none"
         required
       />
 
       <button
         type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition"
+        className="w-full bg-[#5067aa] hover:bg-[#86a6de] text-white py-3 rounded-lg transition"
       >
         Register
       </button>
